@@ -52,6 +52,10 @@ public class Carro {
 	public double getCombustivelNoTanqueEmLitros() {
 		return combustivelNoTanqueEmLitros;
 	}
+	
+	public void esvaziarCarro() {
+		combustivelNoTanqueEmLitros = 0;
+	}
 
 }
 
