@@ -67,12 +67,10 @@ class TestesComCarro {
 	}
 	
 	@Test
-	void contruir() {
+	void esvaziarCarro() {
 		Carro paratiWAS9876 = new Carro();
 		
-		assertEquals(30.00, paratiWAS9876.getCombustivelNoTanqueEmLitros());
-		
-		paratiWAS9876.abastecer(1.00);
+		paratiWAS9876.abastecer(20.00);
 		
 		paratiWAS9876.ligar();
 		
@@ -80,10 +78,10 @@ class TestesComCarro {
 		paratiWAS9876.acelerar();
 		paratiWAS9876.acelerar();
 		
-		paratiWAS9876.desligar();
-
-		assertEquals(30.00, paratiWAS9876.getCombustivelNoTanqueEmLitros());
+		paratiWAS9876.esvaziarCarro();
 		
+		
+		assertEquals(0, paratiWAS9876.getCombustivelNoTanqueEmLitros());
 	}
 
 }
