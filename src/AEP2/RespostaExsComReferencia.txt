@@ -1,0 +1,59 @@
+                                           
+
+                                         1
+
+  Tem o objetivo de dividir o programa em partes e impedir o acesso aos dados, assim 
+controlando o acesso aos atributos e métodos, logo o encapsulamento serve para garantir 
+a segurança dos dados que são implementados em cada objeto impedindo que outros objetos 
+tenham acesso a eles, podendo apenas ser modificado por métodos pré estabelecidos.
+
+EXEMPLO: 
+public class Pessoa {
+    private String nome;
+    private String sobrenome;	 
+    private String cpf;
+    private int idade;
+
+
+    public void setNome(String nome) {
+            this.nome = nome;
+    }
+      
+    public void setSobrenome(String sobrenome) {
+            this.sobrenome = sobrenome;
+}
+  Aqui os atributos foram protegidos, e é necessário usar métodos para manipula-los.
+
+
+===================================================================================================
+                                         2
+
+  Utilizando os métodos acessores e modificadores(Getters e setters), o setters
+com objetivo de modificar atributos de uma forma protegida como também possibilita ter de 
+mudar algo em um lugar, pode também promover o reuso dos cógidos
+
+EXEMPLO:
+Pessoa joao = new Pessoa();
+		
+		joao.setNome("João");
+		joao.setSobrenome("Coutinho");
+		joao.setCpf("08632532484");
+		joao.setIdade(42);
+
+                if (joao.getIdade() < 18) {
+		        throw new RuntimeException("A pessoa deve ser maior de idade!");
+	        }
+}
+  Usando o setIdade, se tem certeza que a idade sempre será maior que 18, ou seja, 
+sem necessidade de atualizar. Deste modo você pode reaproveitar seu código usando
+os Setters e Getters.
+
+
+REFERÊNCIAS:
+https://www.devmedia.com.br/conceitos-encapsulamento-programacao-orientada-a-objetos/18702
+
+https://www.devmedia.com.br/encapsulamento-polimorfismo-heranca-em-java/12991
+
+https://www.devmedia.com.br/get-e-set-metodos-acessores-em-java/29241
+
+https://www.alura.com.br/artigos/o-que-e-encapsulamento
